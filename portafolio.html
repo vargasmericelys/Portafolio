@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mericelys Vargas | Portafolio de Ciberseguridad</title>
+<meta name="description" content="Portafolio de Mericelys Vargas, egresada de Ciberseguridad, Panamá.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1020;
+    --bg2:#14162b;
+    --card:#191b36;
+    --line:#2a2d52;
+    --text:#ecebf7;
+    --muted:#a9abc9;
+    --violet:#a78bfa;
+    --rose:#f4a7c3;
+    --gold:#f2d6a2;
+    --grad:linear-gradient(120deg,#a78bfa 0%,#f4a7c3 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:
+      radial-gradient(900px 500px at 85% -10%,rgba(167,139,250,.18),transparent 60%),
+      radial-gradient(700px 500px at -10% 30%,rgba(244,167,195,.10),transparent 60%),
+      var(--bg);
+    background-attachment:fixed;
+    color:var(--text);line-height:1.7;
+  }
+  a{color:var(--violet);text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(15,16,32,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:10px}
+  nav .logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.15rem;letter-spacing:.3px;color:var(--text)}
+  nav .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+  nav a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--text)}
+
+  .hero{padding:110px 0 90px}
+  .eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.08;margin-bottom:22px}
+  h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);max-width:620px;font-size:1.15rem}
+  .btns{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{padding:12px 26px;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03);transition:transform .2s,border-color .2s,background .2s}
+  .btn:hover{transform:translateY(-2px);border-color:var(--violet)}
+  .btn.primary{background:var(--grad);color:#1a1033;border:none}
+  .btn.primary:hover{filter:brightness(1.07)}
+
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:2rem;margin-bottom:30px}
+  h2::after{content:"";display:block;width:48px;height:3px;border-radius:3px;background:var(--grad);margin-top:12px}
+  #sobre-mi p{color:var(--muted);max-width:760px;font-size:1.04rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.55);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+  .card h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.2rem;margin-bottom:6px;line-height:1.3}
+  .card .meta{color:var(--gold);font-size:.85rem;font-weight:500;margin-bottom:12px}
+  .card p{color:var(--muted);font-size:.97rem}
+
+  .skills-group{margin-bottom:26px}
+  .skills-group h3{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.3);color:var(--text);padding:7px 16px;border-radius:999px;font-size:.9rem;transition:background .2s,transform .2s}
+  .chip:hover{background:rgba(167,139,250,.2);transform:translateY(-2px)}
+
+  #contacto p{color:var(--muted)}
+  footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:.88rem}
+
+  @media (max-width:600px){
+    .hero{padding:70px 0 60px}
+    nav ul{gap:14px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <span class="logo">Mericelys <span>Vargas</span></span>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#logros">Logros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Ciberseguridad · Panamá</span>
+    <h1>Mericelys <span>Vargas</span></h1>
+    <p>Egresada de Ciberseguridad (ITSE, Panamá). Me apasiona la seguridad ofensiva y defensiva y los CTF. Abierta a nuevas oportunidades.</p>
+    <div class="btns">
+      <a class="btn primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="#contacto">Contáctame</a>
+    </div>
+  </div>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy egresada de Ciberseguridad del Instituto Técnico Superior Especializado (ITSE), Escuela de Innovación Digital, en Panamá. Mi formación me llevó a interesarme por ambos lados de la seguridad: pensar como atacante para encontrar debilidades y como defensora para corregirlas antes de que alguien más las aproveche.</p>
+    <p style="margin-top:14px">Me interesan el análisis de vulnerabilidades y el forense digital, y me gusta convertir los hallazgos en informes técnicos claros, con severidad y recomendaciones de remediación alineadas a estándares como ISO/IEC 27001.</p>
+    <p style="margin-top:14px">Compito en CTF porque son la mejor forma de practicar bajo presión: en 2025 obtuve el 3.er lugar en SheSecures Panamá y en 2026 quedé en el Top 10 del OEA Cyber Challenge Panamá. Sigo aprendiendo cada día sobre seguridad en la nube, detección y respuesta (EDR/XDR/MDR) y nuevas técnicas, y busco una posición donde pueda aportar y seguir creciendo.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia y formación</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Práctica profesional en Ciberseguridad</h3>
+        <div class="meta">Empresa de tecnología · Panamá</div>
+      </div>
+      <div class="card">
+        <h3>Ciberseguridad (egresada)</h3>
+        <div class="meta">ITSE · Escuela de Innovación Digital · Panamá</div>
+        <p>Formación en seguridad de redes, análisis de vulnerabilidades, forense digital y seguridad en la nube.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Prueba de penetración autónoma con NodeZero</h3>
+        <div class="meta">Laboratorio · Red doméstica</div>
+        <p>Ejecución de un pentest autónomo y elaboración de un informe formal de hallazgos: ausencia de segmentación de red, certificado sin firmar, servicios de infraestructura expuestos y brechas en la identificación de sistemas operativos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="skills-group">
+      <h3>Herramientas</h3>
+      <div class="chips">
+        <span class="chip">Kali Linux</span><span class="chip">Autopsy (nivel básico)</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h3>Áreas</h3>
+      <div class="chips">
+        <span class="chip">EDR / XDR / MDR</span><span class="chip">Seguridad en la nube (Azure / AWS)</span>
+        <span class="chip">Forense digital</span><span class="chip">Documentación técnica</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h3>Marcos y estándares</h3>
+      <div class="chips">
+        <span class="chip">ISO/IEC 27001</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="logros">
+    <h2>Logros</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Top 10 · OEA Cyber Challenge Panamá 2026</h3>
+        <div class="meta">Organización de los Estados Americanos (OEA)</div>
+        <p>Competencia de retos prácticos de ciberseguridad durante 24 horas continuas, donde logré posicionarme en el Top 10. Una experiencia sumamente enriquecedora para seguir fortaleciendo mi perfil técnico.</p>
+      </div>
+      <div class="card">
+        <h3>3.er lugar · SheSecures Panamá 2025</h3>
+        <div class="meta">Plataforma Hackrocks</div>
+        <p>Competencia CTF de ciberseguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres conversar sobre ciberseguridad, oportunidades o colaboraciones?</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:vargasmericelys@gmail.com">vargasmericelys@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/mericelys-vargas-171972361" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/vargasmericelys" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  © 2026 Mericelys Vargas · Panamá
+</footer>
+
+</body>
+</html>
